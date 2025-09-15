@@ -14,6 +14,11 @@ pipeline {
     }
 
     stages {
+        stage('Clean Workspace') {
+          steps {
+                cleanWs()  // Requires Workspace Cleanup Plugin
+          }
+    }
 
         stage('Checkout') {
             steps {
